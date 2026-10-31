@@ -1,0 +1,3 @@
+- [ ] Create shared report tables, submission/return permissions, and private photo storage.
+- [ ] Replace local report reads/writes with Supabase and live updates; migrate demo and browser reports without duplicates.
+- [ ] Verify submission, photos, search, filters, cross-device reads, and safe return updates.
