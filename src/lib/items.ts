@@ -79,7 +79,7 @@ export function useItems(): Item[] {
   return [...items].sort((a, b) => b.createdAt - a.createdAt);
 }
 
-export function filterItems(items: Item[], f: { q?: string; category?: string; location?: string; type?: string; status?: string }) {
+export function filterItems(items: Item[], f: { q?: string | undefined; category?: string | undefined; location?: string | undefined; type?: string | undefined; status?: string | undefined }) {
   const q = (f.q ?? "").trim().toLowerCase();
   return items.filter(
     (i) =>
