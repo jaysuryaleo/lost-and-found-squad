@@ -19,7 +19,7 @@ export function ReportForm({ type }: { type: ItemType }) {
   function onFile(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
-    if (file.size > 3 * 1024 * 1024) return toast.error("Photo must be under 3 MB");
+    if (file.size > 3 * 1024 * 1024) { toast.error("Photo must be under 3 MB"); return; }
     const img = new Image();
     const reader = new FileReader();
     reader.onload = () => {

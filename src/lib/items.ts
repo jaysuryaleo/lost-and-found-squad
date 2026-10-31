@@ -16,8 +16,8 @@ export interface Item {
   date: string;
   contactName: string;
   contactEmail: string;
-  contactPhone?: string;
-  photo?: string;
+  contactPhone?: string | undefined;
+  photo?: string | undefined;
   createdAt: number;
 }
 

@@ -5,10 +5,10 @@ import { ItemCard } from "@/components/ItemCard";
 import { CATEGORIES, LOCATIONS, filterItems, useItems } from "@/lib/items";
 import { cn } from "@/lib/utils";
 
-type S = { q?: string; category?: string; location?: string; type?: "lost" | "found"; status?: "open" | "returned" };
+type S = { q?: string | undefined; category?: string | undefined; location?: string | undefined; type?: "lost" | "found" | undefined; status?: "open" | "returned" | undefined };
 
 export const Route = createFileRoute("/browse")({
-  validateSearch: (s: Record<string, unknown>): S => ({
+  validateSearch: (s: { q?: unknown; category?: unknown; location?: unknown; type?: unknown; status?: unknown }): S => ({
     q: typeof s.q === "string" && s.q ? s.q : undefined,
     category: typeof s.category === "string" && s.category ? s.category : undefined,
     location: typeof s.location === "string" && s.location ? s.location : undefined,
