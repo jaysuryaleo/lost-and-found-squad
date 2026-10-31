@@ -31,7 +31,7 @@ export function ItemCard({ item, index = 0 }: { item: Item; index?: number }) {
       className="group animate-rise overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant">
       <div className="relative overflow-hidden">
         <ItemPhoto item={item} className="aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-105" />
-        <div className="absolute left-3 top-3"><StatusBadge item={item} /></div>
+        <div className="absolute left-3 top-3 rounded-full bg-card shadow-card"><StatusBadge item={item} /></div>
       </div>
       <div className="space-y-2 p-4">
         <p className="text-xs font-semibold uppercase tracking-wider text-accent-foreground">{item.category}</p>
